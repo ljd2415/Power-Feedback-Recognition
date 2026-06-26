@@ -1,0 +1,44 @@
+{
+  "name": "community-power-feedback",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:web": "vite",
+    "build": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && vite build",
+    "start": "tsx server/index.ts",
+    "test": "node --import tsx --test server/**/*.test.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "docx": "^9.5.1",
+    "dotenv": "^16.5.0",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.0.1",
+    "pdfkit": "^0.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.0.0",
+    "@types/pdfkit": "^0.13.8",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.4",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}

@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+scripts/node_modules/
+
+# Build outputs and caches
+dist/
+.vite/
+.cache/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+server/*.d.ts
+server/*.test.d.ts
+
+# Local environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Runtime data and generated reports
+data/
+reports/
+*.log
+
+# Local tool state
+.agents/
+.codex/
+
